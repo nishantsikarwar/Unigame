@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Unigame</string>
+    <string name="sign_out">SIGN_OUT</string>
+    <string name="game">GAME</string>
+</resources>

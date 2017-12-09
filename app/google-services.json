@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "121689086775",
+    "firebase_url": "https://unigame-becca.firebaseio.com",
+    "project_id": "unigame-becca",
+    "storage_bucket": "unigame-becca.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:121689086775:android:fcc139f4e69435b8",
+        "android_client_info": {
+          "package_name": "com.example.nishant.unigame"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "121689086775-c24hgv2mbmfbo2u6iaj41f55h9nqbhfa.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.nishant.unigame",
+            "certificate_hash": "4d265d94be303da10da9d8cdf4f9ceaacb3f4401"
+          }
+        },
+        {
+          "client_id": "121689086775-t4g6j1c81vds81ti5js8r3fhj674jtcr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQgFbWtr_dChEsVl5SeL28yFPIayDip5k"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "121689086775-t4g6j1c81vds81ti5js8r3fhj674jtcr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
