@@ -9,6 +9,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.ListView;
 import android.widget.Toast;
 
 import com.firebase.ui.auth.AuthUI;
@@ -24,8 +25,8 @@ public class MainActivity extends AppCompatActivity {
     private FirebaseAuth mfirebaseAuth;
     private FirebaseAuth.AuthStateListener mauthStateListener;
     private final static int RC_SIGN_IN =1;
-    private RecyclerView recyclerView;
-    private RecyclerAdapter adapter;
+    private ListView game_listView;
+    private GameListAdapter adapter;
     private ArrayList<ListItem> listItemArrayList = new ArrayList<>();
 
     @Override
@@ -35,10 +36,11 @@ public class MainActivity extends AppCompatActivity {
 
 
         mfirebaseAuth = FirebaseAuth.getInstance();
-        recyclerView=(RecyclerView)findViewById(R.id.recycler_view);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        adapter = new RecyclerAdapter(this);
-        populateRecyclerViewValues();
+        game_listView = (ListView)findViewById(R.id.game_listView);
+        adapter = new GameListAdapter(this,R.layout.activity_listitem,listItemArrayList);
+        game_listView.setAdapter(adapter);
+     game_listView.setOnItemClickListener();
+        populateListViewValues();
 
         mauthStateListener = new FirebaseAuth.AuthStateListener() {
 
@@ -131,14 +133,16 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-  private void populateRecyclerViewValues(){
-        ListItem listItem = new ListItem();
+  private void populateListViewValues(){
+
         for ( int i = 0 ;i <10;i++){
+            ListItem listItem = new ListItem();
+            String counter = Integer.toString(i);
             listItem.setGame_name("FOOTBALL");
-            listItemArrayList.add(listItem);
+            listItem.setGame_count(counter);
+            adapter.add(listItem);
         }
-        adapter.setListContent(listItemArrayList);
-      recyclerView.setAdapter(adapter);
+
 
   }
 

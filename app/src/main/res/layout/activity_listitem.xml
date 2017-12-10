@@ -1,10 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="57dp"
     android:clickable="true"
     android:focusable="true"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
     >
+
+
+
+    <TextView
+        android:id="@+id/game_count"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/circle"
+        android:fontFamily="sans-serif"
+        android:textColor="@android:color/holo_green_light"
+        android:text=""
+        android:textSize="17sp" />
+
 
 
     <TextView
@@ -13,9 +31,11 @@
         android:id="@+id/game_name"
         android:gravity="center"
         android:hint="@string/game"
-        android:textSize="17dp"
-        android:layout_marginLeft="17dp"
-        android:layout_marginTop="17dp"
+        android:textSize="17sp"
+       android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="1dp"
         />
 
-</LinearLayout>
+
+</RelativeLayout>
