@@ -6,16 +6,16 @@ import android.widget.ListView;
  * Created by nishant on 9/12/17.
  */
 
-public class ListItem {
+public class GameList {
 
     private String game_name,game_count;
 
-    public ListItem(String game_count,String game_name){
+    public GameList(String game_count, String game_name){
         this.game_count=game_count;
         this.game_name=game_name;
     }
 
-    public ListItem(){
+    public GameList(){
 
     }
 
